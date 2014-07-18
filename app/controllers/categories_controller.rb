@@ -4,7 +4,7 @@ class CategoriesController < ApplicationController
   end
 
   def show
-    @category_name = Category.find(params[:id]).name
-    @activities = Activity.where(category_id: params[:id]).page params[:page]
+    @category = Category.find_by(name: params[:id])
+    @activities = Activity.where(category_id: @category.id).page params[:page]
   end
 end

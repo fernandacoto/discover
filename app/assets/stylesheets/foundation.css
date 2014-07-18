@@ -1522,7 +1522,7 @@ meta.foundation-mq-topbar {
 
 @media only screen and (min-width: 40.063em) {
   .top-bar {
-    background: #333333;
+    background: rgb(55, 189, 99);
     overflow: visible; }
     .top-bar:before, .top-bar:after {
       content: " ";
@@ -1567,7 +1567,7 @@ meta.foundation-mq-topbar {
     .top-bar-section li:not(.has-form) a:not(.button) {
       padding: 0 15px;
       line-height: 45px;
-      background: #333333; }
+      background: rgb(55, 189, 99);  }
       .top-bar-section li:not(.has-form) a:not(.button):hover {
         background-color: #555555;
         background: #272727; }
