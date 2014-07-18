@@ -1,0 +1,33 @@
+<div class="row" style="margin-top:30px">
+  <div class="large-8 columns">
+    <% @categories.each do |category|%>
+      <div class="large-6 small-6 columns">
+        <%= link_to category.name, category_path(category), class:"button rounded-corners animated rotateIn", style:"width:100%;background-color: rgb(55, 189, 99);" %>
+      </div>
+    <%end%>
+  </div>
+  <div id="side-bar" class="small-2 columns">
+
+    <ul class="side-nav">
+      <li><a  class="link_side_bar" href="#">About Costa Rica</a></li>
+      <li><a class="link_side_bar" href="#">Tips for travelers</a></li>
+      <li><a class="link_side_bar" href="#">Main events</a></li>
+      <li><a class="link_side_bar" href="#">Gallery</a></li>
+    </ul>
+
+    <p><%= image_tag "costa_rica_small.jpg" %></p>
+
+  </div>
+</div>
+<div id="bottom-bar"class="row">
+  <div class="small-12 large-6 columns">
+    <ul class="side-nav">
+      <li><a  class="link_side_bar" href="#">About Costa Rica</a></li>
+      <li><a class="link_side_bar" href="#">Tips for travelers</a></li>
+      <li><a class="link_side_bar" href="#">Main events</a></li>
+      <li><a class="link_side_bar" href="#">Gallery</a></li>
+    </ul>
+
+    <p><%= image_tag "costa_rica_small.jpg" %></p>
+  </div>
+</div>

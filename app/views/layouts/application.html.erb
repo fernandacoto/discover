@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DisCoveR</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <script src="assets/jquery.js"></script>
+  <script src="assets/foundation.js"></script>
+  <script src="assets/foundation.topbar.js"></script>
+  <link rel="stylesheet" href="assets/animate.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+  <nav class="top-bar" data-topbar>
+  <ul class="title-area">
+
+    <li class="name">
+    <h1>
+      <a href="#">
+        <%=image_tag "discover.png", style: "width: 46px;"%>
+        disCoveR
+      </a>
+    </h1>
+    </li>
+    <li class="toggle-topbar menu-icon"><a href="#"><span>menu</span></a></li>
+  </ul>
+
+  <section class="top-bar-section">
+
+  <ul class="right">
+    <li class="divider"></li>
+    <li><a href="#">About us</a></li>
+    <li class="divider"></li>
+    <li class="has-dropdown">
+    <a href="#">Contact us</a>
+    <ul class="dropdown">
+      <li><a href="#">New activity</a></li>
+      <li><a href="#">Dropdown Option</a></li>
+      <li><a href="#">Dropdown Option</a></li>
+      <li class="divider"></li>
+      <li><a href="#">See all →</a></li>
+    </ul>
+    </li>
+  </ul>
+  </section>
+  </nav>
+
+
+
+  <%= yield %>
+  <script>
+    $(document).foundation();
+  </script>
+</body>
+</html>

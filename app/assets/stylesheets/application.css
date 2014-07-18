@@ -1,0 +1,110 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require foundation
+ *= require_self
+ */
+
+body{
+  background-color: rgb(37, 134, 191);
+}
+.link_side_bar{
+  color: rgb(131, 228, 116) !important;
+}
+.link_side_bar:hover {
+  background-color: rgb(52,188,98) !important;
+  color: black !important;
+}
+#bottom-bar {
+    display: none;
+}
+#side-bar {
+ margin-top: -12px !important;
+}
+.rounded-corners {
+  border-radius: 10px !important;
+  box-shadow: 0px 10px rgb(51, 168, 219);
+}
+.pagination {
+   padding: 15px !important;
+   color: white !important;
+   font-weight: bold !important;
+   margin: 10px !important;
+   text-align: center !important;
+   border-radius: 37px !important;
+}
+.page a {
+  color: rgb(48, 185, 97) !important;
+  padding: 5px;
+}
+.next a {
+  color: rgb(48, 185, 97) !important;
+  padding: 5px;
+}
+.last a {
+  color: rgb(48, 185, 97) !important;
+  padding: 5px;
+}
+.first a {
+  color: rgb(48, 185, 97) !important;
+  padding: 5px;
+}
+.prev a {
+  color: rgb(48, 185, 97) !important;
+  padding: 5px;
+}
+.page a:hover {
+  color: white !important;
+  font-weight: bold;
+}
+.next a:hover {
+  color: white !important;
+  font-weight: bold;
+}
+.last a:hover {
+  color: white !important;
+  font-weight: bold;
+}
+.first a:hover {
+  color: white !important;
+  font-weight: bold;
+}
+.prev a:hover {
+  color: white !important;
+  font-weight: bold;
+}
+.btn-return {
+  color: black;
+  border: 13px solid white;
+  background-color: white;
+  border-radius: 8px;
+  text-rendering: optimizeLegibility;
+  position: relative;
+  left: 47%;
+}
+.large-9 {
+  width: 100%;
+}
+.btn-return:hover {
+  color: white;
+  background-color: black;
+  border-color: black;
+}
+@media(max-width: 1019px){
+  #side-bar {
+    display: none;
+  }
+  #bottom-bar {
+    display: block;
+    text-align: center !important;
+  }
+}

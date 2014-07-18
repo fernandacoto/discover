@@ -1,0 +1,20 @@
+<% if !@activities.empty? %>
+  <div class="large-8-centered columns" style ="margin-top:50px">
+    <div class="row">
+      <% @activities.each do |activity| %>
+        <div class="large-4 small-6 columns">
+          <% if !activity.img_url.present? %>
+            <%= link_to "<img src='http://placehold.it/1000x1000&text=Thumbnail'/>".html_safe, activity_path(activity) %>
+          <%else%>
+            <%= link_to image_tag(activity.img_url), activity_path(activity.id)%>
+          <%end%>
+          <div class="panel">
+            <h5><%= activity.name.truncate(25) %></h5>
+          </div>
+        </div>
+      <%end%>
+      <%= paginate @activities %>
+    </div>
+  </div>
+<%end%>
+<%= link_to "<- Back", root_path, class: "btn-return" %>
