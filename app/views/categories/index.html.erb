@@ -1,10 +1,10 @@
 <div class="row" style="margin-top:30px">
   <div class="large-8 columns">
-    <% @categories.each do |category|%>
-      <div class="large-6 small-6 columns" style="text-align: center;">
-        <%= link_to image_tag('../assets/natural.png', style:'width: 100px'), category_path(category), class:"animated rotateIn", style:"width:100%;" %>
+    <% @categories.order('name ASC').each do |category|%>
+      <div class="large-4 small-6 columns" style="text-align: center;">
+        <%= link_to image_tag(category.url, class:'category', style:'position:relative; width: 100px; border-radius: 10px; border: 4px solid; padding: 5px; box-shadow: 2px 2px 3px rgb(172, 172, 172);'), category_path(category), class:"animated rotateIn", style:"width:100%;" %>
         <div style="margin: 10px 0">
-        <%= link_to category.name, category_path(category), class:'button'  %> </h3>
+        <%= link_to category.name, category_path(category), class:'button', style:'width: 140px; border-radius: 60px;'  %> </h3>
       </div>
       </div>
     <%end%>
@@ -34,3 +34,13 @@
     <p><%= image_tag "costa_rica_small.jpg" %></p>
   </div>
 </div>
+
+<script>
+  $(document).ready(function(){
+  $(this).find('.category').on('mouseover',function(){
+  $(this).animate({'top':'-10px'}, 'fast');
+  }).on('mouseleave',function(){
+  $(this).animate({'top':'0px'}, 'fast');
+  });
+  });
+</script>
