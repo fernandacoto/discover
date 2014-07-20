@@ -15,3 +15,4 @@ gem 'kaminari'
 gem 'spring',        group: :development
 gem 'devise'
 gem 'activeadmin',github: 'gregbell/active_admin'
+gem 'smarter_csv'
