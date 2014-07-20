@@ -3,7 +3,4 @@ class Category < ActiveRecord::Base
   has_many :activities
   paginates_per 4
 
-  def to_param
-    name
-  end
 end
