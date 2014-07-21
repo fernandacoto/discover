@@ -7,3 +7,8 @@
   top: 7px;
   width: 100px;
 }
+
+@font-face {
+  font-family: 'titleFont';
+  src: url('AnjaEliane.ttf');
+}
