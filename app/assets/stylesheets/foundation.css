@@ -1252,10 +1252,14 @@ meta.foundation-mq-topbar {
       margin-top: 45px; }
 
 .top-bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 20;
   overflow: hidden;
   height: 45px;
   line-height: 45px;
-  position: relative;
   background: #333333;
   margin-bottom: 0; }
   .top-bar ul {
@@ -1280,6 +1284,7 @@ meta.foundation-mq-topbar {
     position: relative;
     margin: 0; }
   .top-bar .name {
+    background: rgb(55, 189, 99);
     height: 45px;
     margin: 0;
     font-size: 16px; }
