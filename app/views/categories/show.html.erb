@@ -6,7 +6,7 @@
           <% if !activity.img_url.present? %>
             <%= link_to "<img src='http://placehold.it/1000x1000&text=Thumbnail'/>".html_safe, activity_path(activity) %>
           <%else%>
-            <%= link_to image_tag(activity.img_url), activity_path(activity.id)%>
+            <%= link_to image_tag(activity.img_url, style:"border-radius: 10px;border: 4px solid;box-shadow: 2px 2px 3px #ACACAC;"), activity_path(activity.id)%>
           <%end%>
           <div class="panel" style: "height: 55px">
             <h5 style="font-size: 0.8em"><%= activity.name.truncate(25) %></h5>
