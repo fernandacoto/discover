@@ -1252,8 +1252,8 @@ meta.foundation-mq-topbar {
       margin-top: 45px; }
 
 .top-bar {
-  border-bottom: 2px solid white;
   position: fixed;
+  border-bottom: 2px solid white;
   left: 0;
   right: 0;
   top: 0;
