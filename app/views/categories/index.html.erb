@@ -1,50 +1,11 @@
-
 <div class="row" style="margin-top:25%">
   <div class="large-12 columns">
     <% @categories.order('name ASC').each do |category|%>
       <div class="large-4 small-4 columns" style="text-align: center; margin-bottom: 25px">
-        <%= link_to image_tag(category.url, class:'category', style:'position:relative; width: 100px; border-radius: 10px; border: 4px solid; padding: 5px; box-shadow: 2px 2px 3px rgb(172, 172, 172); background: white'), category_path(category), class:"animated rotateIn", style:"width:100%;" %>
+        <%= link_to image_tag(category.url, class:'category', style:'position:relative; min-width:80px; max-width: 130px; width: 70%; border-radius: 100px; border: 4px solid; padding: 5px; box-shadow: 2px 2px 3px rgb(172, 172, 172); background: rgba(255,255,255,0.6);'), category_path(category), class:"animated rotateIn", style:"width:100%;" %>
         <div style="margin: 10px 0">
-        <%= link_to category.name, category_path(category), class:'', style:'width: 140px; border-radius: 60px; font-size: 0.8em; padding: 3px 9px; background: white'  %> </h3>
+          <%= link_to category.name, category_path(category), class:'', style:'width: 140px; border-radius: 60px; font-size: 0.8em; padding: 3px 9px; background: white'  %> </h3>
       </div>
-      </div>
-    <%end%>
-  </div>
-
-<!--
-  <div id="side-bar" class="small-2 columns">
-
-    <ul class="side-nav">
-      <li><a  class="link_side_bar" href="#">About Costa Rica</a></li>
-      <li><a class="link_side_bar" href="#">Tips for travelers</a></li>
-      <li><a class="link_side_bar" href="#">Main events</a></li>
-      <li><a class="link_side_bar" href="#">Gallery</a></li>
-    </ul>
-
-    <p><%#= image_tag "costa_rica_small.jpg" %></p>
-
-  </div>
+    </div>
+  <%end%>
 </div>
-<div id="bottom-bar"class="row">
-  <div class="small-12 large-6 columns">
-    <ul class="side-nav">
-      <li><a  class="link_side_bar" href="#">About Costa Rica</a></li>
-      <li><a class="link_side_bar" href="#">Tips for travelers</a></li>
-      <li><a class="link_side_bar" href="#">Main events</a></li>
-      <li><a class="link_side_bar" href="#">Gallery</a></li>
-    </ul>
-
-    <p><%#= image_tag "costa_rica_small.jpg" %></p>
-  </div>
-</div>
--->
-
-<script>
-  $(document).ready(function(){
-  $(this).find('.category').on('mouseover',function(){
-  $(this).animate({'top':'-10px'}, 'fast');
-  }).on('mouseleave',function(){
-  $(this).animate({'top':'0px'}, 'fast');
-  });
-  });
-</script>

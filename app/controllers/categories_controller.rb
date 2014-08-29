@@ -1,4 +1,7 @@
 class CategoriesController < ApplicationController
+  require 'open-uri'
+  require 'json'
+
   def index
     @categories = Category.all
   end

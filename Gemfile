@@ -15,6 +15,8 @@ gem 'kaminari'
 gem 'spring',        group: :development
 gem 'devise'
 gem 'activeadmin',github: 'gregbell/active_admin'
+gem 'json'
 
 gem 'rails_12factor', group: :production
+gem 'jasmine-rails'
 
