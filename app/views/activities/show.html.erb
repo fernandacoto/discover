@@ -53,17 +53,13 @@
   $("#read-more").on("click", function(e){
     e.preventDefault();
     $(this).hide();
-    $(this).prev().hide();
-    $(this).next().slideDown(500);
+    $(this).prev().text("<%= @activity.description%>");
     $(this).next().next().show();
   });
   $("#read-less").on("click", function(e){
     e.preventDefault();
     $(this).hide();
-    $(this).prev().slideUp(500);
-    setTimeout(function(){
-      $("#read-less").prev().prev().show();
-      $("#read-less").prev().prev().prev().slideDown(500);
-    },500);
+    $(this).prev().prev().prev().text("<%=@activity.description.truncate(200)%>");
+    $("#read-less").prev().prev().show();
   });
 </script>
