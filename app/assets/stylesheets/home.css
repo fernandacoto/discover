@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'titleFont';
+  src: url('AnjaEliane.ttf');
+}
+
 #icon-header{
   border-radius: 22px;
   background: white;
@@ -8,7 +13,18 @@
   width: 100px;
 }
 
-@font-face {
-  font-family: 'titleFont';
-  src: url('AnjaEliane.ttf');
+.category{
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.circule-button{
+  background: rgba(138, 163, 38, 0.4);
+  border-radius: 100px;
+  min-width:80px;
+  max-width: 130px;
+  position:relative;
+  padding: 5px;
+  box-shadow: 2px 2px 3px rgb(172, 172, 172);
+  width: 70%;
 }
