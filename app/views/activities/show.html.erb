@@ -23,7 +23,10 @@
           <div class="row">
             <div class="large-9 small-6 columns">
               <h4><%= @activity.name %></h4><hr/>
-              <p style="text-align: justify;"><%= @activity.description %></p>
+              <p style="text-align: justify;"><%= @activity.description.truncate(200) %></p>
+              <a id="read-more" href="#">Leer mas</a>
+              <p style="text-align: justify;display:none;"><%= @activity.description %></p>
+              <a id="read-less" style="display:none" href="#">Leer menos</a>
               <div class="show-for-small" align="center">
                 <a href="#" class="small radius button">Website</a><br>
                 <a href="#" class="small radius button">Take me there</a>
@@ -46,3 +49,21 @@
     </div>
   </div>
 </div>
+<script>
+  $("#read-more").on("click", function(e){
+    e.preventDefault();
+    $(this).hide();
+    $(this).prev().hide();
+    $(this).next().slideDown(2000);
+    $(this).next().next().show();
+  });
+  $("#read-less").on("click", function(e){
+    e.preventDefault();
+    $(this).hide();
+    $(this).prev().slideUp(2000);
+    setTimeout(function(){
+      $("#read-less").prev().prev().show();
+      $("#read-less").prev().prev().prev().slideDown(2000);
+    },2000);
+  });
+</script>
