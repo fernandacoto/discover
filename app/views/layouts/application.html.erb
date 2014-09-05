@@ -1,68 +1,43 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>DisCoveR</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-  <script src="assets/jquery.js"></script>
-  <script src="assets/foundation.js"></script>
-  <script src="assets/foundation.topbar.js"></script>
-  <link rel="stylesheet" href="assets/animate.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-</head>
-<body>
-  <nav class="top-bar" style="background: none" data-topbar>
-  <ul class="title-area">
+  <head>
+    <title>DisCoveR</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+    <script src="assets/jquery.js"></script>
+    <script src="assets/foundation.js"></script>
+    <script src="assets/foundation.topbar.js"></script>
+    <link rel="stylesheet" href="assets/animate.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <nav class="top-bar" style="background: none" data-topbar>
+    <ul class="title-area">
 
-    <li class="name" style="background: rgba(138, 163, 38, 0.6);">
-    <h1>
-      <a href="../" class="hide-for-small">
-        <%= image_tag "discover.png", id:'icon-header' %>
-        disCoveR
-      </a>
-    </h1>
-    </li>
-
-<!--
-    <li class="toggle-topbar menu-icon"><a href="#"><span>menu</span></a></li>
-    -->
-  </ul>
-  <section class="top-bar-section">
-
-<!--
-  <ul class="right">
-    <li class="divider"></li>
-    <li><a href="#">About us</a></li>
-    <li class="divider"></li>
-    <li class="has-dropdown">
-    <a href="#">Contact us</a>
-    <ul class="dropdown">
-      <li><a href="#">New activity</a></li>
-      <li><a href="#">Dropdown Option</a></li>
-      <li><a href="#">Dropdown Option</a></li>
-      <li class="divider"></li>
-      <li><a href="#">See all →</a></li>
+      <li class="name" style="background: rgba(138, 163, 38, 0.6);">
+      <h1>
+        <a href="../" class="hide-for-small">
+          <%= image_tag "discover.png", id:'icon-header' %>
+          disCoveR
+        </a>
+      </h1>
+      </li>
     </ul>
-    </li>
-  </ul>
+    </nav>
 
-  -->
-  </section>
-  </nav>
-
-<div class="row">
-  <div class="large-12 columns" style="text-align:center;position:fixed;z-index:100;top:3px;left:0;right:0">
-    <h1 style="font-family: titleFont;color: white; letter-spacing: 3px; font-size: 25px">dis<span class="animated zoomInLeft" style="-webkit-animation-duration: 1.5s; color:rgba(255,0,0,0.8); font-weight:bold">C</span>ove<span class="animated zoomInRight" style="font-weight: bold;color:rgba(0, 0, 255,0.8);-webkit-animation-duration: 1.5s;">R</span></h1>
-  </div>
-</div>
+    <div class="row">
+      <div class="large-12 columns" style="text-align:center;position:fixed;z-index:100;top:3px;left:0;right:0">
+        <h1 style="font-family: titleFont;color: white; letter-spacing: 3px; font-size: 25px">dis<span class="animated zoomInLeft" style="-webkit-animation-duration: 1.5s; color:rgba(255,0,0,0.8); font-weight:bold">C</span>ove<span class="animated zoomInRight" style="font-weight: bold;color:rgba(0, 0, 255,0.8);-webkit-animation-duration: 1.5s;">R</span></h1>
+      </div>
+    </div>
 
 
-  <div style="height:100%; overflow: scroll">
-    <%= yield %>
-  </div>
-  <script>
-    $(document).foundation();
-  </script>
-</body>
+    <div style="height:100%; overflow: scroll">
+      <%= yield %>
+    </div>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
 </html>

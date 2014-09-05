@@ -1,20 +1,22 @@
 <% if !@activities.empty? %>
   <div class="large-8-centered columns" style ="margin-top:50px">
-    <div class="row">
-      <% @activities.each do |activity| %>
-        <div class="large-4 small-6 columns">
-          <% if !activity.img_url.present? %>
-            <%= link_to "<img src='http://placehold.it/1000x1000&text=Thumbnail'/>".html_safe, activity_path(activity) %>
-          <%else%>
-            <%= link_to image_tag(activity.img_url, style:" margin-bottom: 5px;border-radius: 10px;border: 4px solid;box-shadow: 2px 2px 3px #ACACAC;"), activity_path(activity.id)%>
-          <%end%>
-          <div class="panel" style= "height: 55px">
-            <h5 style="font-size: 0.8em"><%= activity.name.truncate(25) %></h5>
+    <% @activities.each do |activity| %>
+      <div class="row">
+        <div class="small-12 columns panel" style="padding-right: 0px; padding-left: 0px; margin-bottom: 5px;">
+          <div class="small-4 columns">
+            <% if !activity.img_url.present? %>
+              <%= link_to "<img src='http://placehold.it/1000x1000&text=Thumbnail'/>".html_safe, activity_path(activity) %>
+            <%else%>
+              <%= link_to image_tag(activity.img_url, style:"solid;box-shadow: 2px 2px 3px #ACACAC;"), activity_path(activity.id)%>
+            <%end%>
+          </div>
+          <div class="small-8 columns">
+            <h5 style="font-size: 0.8em"><%= activity.name.truncate(100) %></h5>
           </div>
         </div>
-      <%end%>
-      <%= paginate @activities %>
-    </div>
+      </div>
+    <%end%>
   </div>
 <%end%>
+
 <%= link_to "<- Back", root_path, class: "btn-return" %>
