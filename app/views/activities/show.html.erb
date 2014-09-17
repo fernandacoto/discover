@@ -24,7 +24,7 @@
             <div class="large-9 small-6 columns">
               <h4><%= @activity.name %></h4><hr/>
               <p style="text-align: justify;"><%= @activity.description.truncate(200) %></p>
-              <a id="read-more" href="#">Leer mas</a>
+              <a id="read-more" href="#">Leer mas ...</a>
               <a id="read-less" style="display:none" href="#">Leer menos</a>
               <div class="show-for-small" align="center">
                 <a href="#" class="small radius button">Website</a><br>
@@ -53,12 +53,12 @@
     e.preventDefault();
     $(this).hide();
     $(this).prev().text("<%= @activity.description%>");
-    $(this).next().next().show();
+    $(this).next().show();
   });
   $("#read-less").on("click", function(e){
     e.preventDefault();
     $(this).hide();
-    $(this).prev().prev().prev().text("<%=@activity.description.truncate(200)%>");
-    $("#read-less").prev().prev().show();
+    $(this).prev().prev().text("<%=@activity.description.truncate(200)%>");
+    $("#read-less").prev().show();
   });
 </script>
