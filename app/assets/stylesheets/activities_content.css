@@ -1,0 +1,25 @@
+.show-for-small{
+  margin-top: 15px;
+}
+
+.website-button{
+  margin-right: 10px;
+}
+
+.button-activities, .button-activities:hover {
+  background-color: rgba(138, 163, 38, 0.6);
+  color: black;
+  font-weight: bold;
+}
+
+.back-activity{
+  z-index: 1;
+  position: fixed;
+  top: 10%;
+  left: 78%;
+}
+
+.panel-border{
+  border: 3px dotted rgba(138, 163, 38, 0.6);
+  border-radius: 16px;
+}
