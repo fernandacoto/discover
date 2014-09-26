@@ -12,11 +12,17 @@
   font-weight: bold;
 }
 
-.back-activity{
-  z-index: 1;
+
+.back:hover {
+  background: none;
+}
+
+.back{
+  z-index: 100;
   position: fixed;
-  top: 10%;
-  left: 78%;
+  top: 0;
+  right: 0;
+  background: none;
 }
 
 .panel-border{
