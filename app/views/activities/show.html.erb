@@ -1,5 +1,6 @@
 <div class="row">
   <div class="large-12 columns">
+    <%= link_to "Back", category_path(@activity.category_id ), class: "small radius button back-activity button-activities" %>
     <div class="hide-for-small">
       <div id="featured">
         <!--img src="http://placehold.it/1000x400&text=Slide Image" alt="slide image"-->
@@ -19,17 +20,17 @@
   <div class="large-12 columns">
     <div class="row">
       <div class="large-8 columns">
-        <div class="panel radius">
+        <div class="panel radius panel-border">
           <div class="row">
             <div class="large-9 small-6 columns">
               <h4><%= @activity.name %></h4><hr/>
               <p style="text-align: justify;"><%= @activity.description.truncate(200) %></p>
-              <a id="read-more" href="#">Leer mas</a>
+              <a id="read-more" href="#">Leer mas ...</a>
               <a id="read-less" style="display:none" href="#">Leer menos</a>
+              <hr>
               <div class="show-for-small" align="center">
-                <a href="#" class="small radius button">Website</a><br>
-                <a href="#" class="small radius button">Take me there</a>
-                <%= link_to "<- Back", category_path(@activity.category_id ), class: "small radius button" %>
+                <a href="#" class="small radius button website-button button-activities">Website</a>
+                <a href="#" class="small radius button button-activities">Take me there</a>
               </div>
             </div>
           </div>
@@ -53,12 +54,12 @@
     e.preventDefault();
     $(this).hide();
     $(this).prev().text("<%= @activity.description%>");
-    $(this).next().next().show();
+    $(this).next().show();
   });
   $("#read-less").on("click", function(e){
     e.preventDefault();
     $(this).hide();
-    $(this).prev().prev().prev().text("<%=@activity.description.truncate(200)%>");
-    $("#read-less").prev().prev().show();
+    $(this).prev().prev().text("<%=@activity.description.truncate(200)%>");
+    $("#read-less").prev().show();
   });
 </script>
