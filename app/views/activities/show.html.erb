@@ -30,21 +30,21 @@
                 <a id="read-less" style="display:none" href="#">Leer menos</a>
               <%end%>
               <hr>
-              <div class="panel">
-                <label>Entrada general:</label>
-                <p><%= @activity.entrance_price.nil? ?  "0.0" : @activity.entrance_price %></p>
+              <div class="panel" style="border-radius: 4px;border-color: rgb(170, 146, 19);">
+                <h4 style="text-decoration: underline;">Entrada general:</h4>
+                <p style="padding-left: 15px;"><%= @activity.entrance_price.nil? ?  "0.0" : @activity.entrance_price %></p>
               </div>
-              <div class="panel">
-                <label>Telefono:</label>
-                <p><%= @activity.phone.nil? ?  "No se ha registrado" : @activity.entrance_price %></p>
+              <div class="panel" style="border-radius: 4px;border-color: rgb(170, 146, 19);">
+                <h4 style="text-decoration: underline;">Telefono:</h4>
+                <p style="padding-left: 15px;"><%= @activity.phone.nil? ?  "No se ha registrado" : @activity.entrance_price %></p>
               </div>
-              <div class="panel">
-                <label>Atracciones</label>
-                <p><%= @activity.attractions.nil? ?  "Aun no registradas" : @activity.attractions %></p>
+              <div class="panel" style="border-radius: 4px;border-color: rgb(170, 146, 19);">
+                <h4 style="text-decoration: underline;">Atracciones</h4>
+                <p style="padding-left: 15px;"><%= @activity.attractions.nil? ?  "Aun no registradas" : @activity.attractions %></p>
               </div>
-              <div class="panel">
-                <label>Ubicacion</label>
-                <p><%= @activity.province_id.nil? ?  "Aun no completada" : @activity.province.name %></p>
+              <div class="panel" style="border-radius: 4px;border-color: rgb(170, 146, 19);">
+                <h4 style="text-decoration: underline;">Ubicacion</h4>
+                <p style="padding-left: 15px;"><%= @activity.province_id.nil? ?  "Aun no completada" : @activity.province.name %></p>
               </div>
 
               <div class="show-for-small" align="center">
