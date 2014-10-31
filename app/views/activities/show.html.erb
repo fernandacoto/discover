@@ -31,25 +31,11 @@
               <%end%>
               <hr>
               <div class="panel" style="border-radius: 4px;border-color: rgb(170, 146, 19);">
-                <h4 style="text-decoration: underline;">Entrada general:</h4>
-                <p style="padding-left: 15px;"><%= @activity.entrance_price.nil? ?  "0.0" : @activity.entrance_price %></p>
-              </div>
-              <div class="panel" style="border-radius: 4px;border-color: rgb(170, 146, 19);">
                 <h4 style="text-decoration: underline;">Telefono:</h4>
-                <p style="padding-left: 15px;"><%= @activity.phone.nil? ?  "No se ha registrado" : @activity.entrance_price %></p>
+                <p style="padding-left: 15px;"><%= @activity.phone.nil? ?  "No se ha registrado" : @activity.phone %></p>
               </div>
-              <div class="panel" style="border-radius: 4px;border-color: rgb(170, 146, 19);">
-                <h4 style="text-decoration: underline;">Atracciones</h4>
-                <p style="padding-left: 15px;"><%= @activity.attractions.nil? ?  "Aun no registradas" : @activity.attractions %></p>
-              </div>
-              <div class="panel" style="border-radius: 4px;border-color: rgb(170, 146, 19);">
-                <h4 style="text-decoration: underline;">Ubicacion</h4>
-                <p style="padding-left: 15px;"><%= @activity.province_id.nil? ?  "Aun no completada" : @activity.province.name %></p>
-              </div>
-
               <div class="show-for-small" align="center">
                 <a href="#" class="small radius button website-button button-activities">Website</a>
-                <a href="#" class="small radius button button-activities">Take me there</a>
               </div>
             </div>
           </div>
@@ -59,9 +45,6 @@
         <h4>More info!</h4><hr/>
         <a class="large button expand" href="#">
           Website
-        </a>
-        <a class="large button expand" href="#">
-          Take me there
         </a>
         <%= link_to "<- Back", category_path(@activity.category_id ), class: "large button expand" %>
       </div>
